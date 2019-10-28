@@ -8,10 +8,11 @@
   background: image_url('prism.png');
 }
 
-.navbar-inverse a.navbar-brand {
+.navbar-dark a.navbar-brand {
   font-family: "Helvetica Neue", Helvetica;
   font-weight: 100;
-  color: white;
+  color: white; 
+  text-align: left;
 }
 
 .hero {
