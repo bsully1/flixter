@@ -17,9 +17,15 @@
   $(function() {
     $('.sections').sortable({
       update: function( event, ui ) {
-          alert("UpdateUrl: " + ui.item.data('update-url') + " Index: " + ui.item.index());
+        $.ajax({
+          type: 'PUT',
+          url: ui.item.data('update-url'),
+          dataType: 'json',
+          data: { section: { row_order_position: ui.item.index() } }
+        });
+      }
     });
-  });
+   });
 </script>
 
 <br />
